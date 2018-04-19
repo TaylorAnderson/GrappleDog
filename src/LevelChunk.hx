@@ -49,23 +49,29 @@ class LevelChunk extends Entity {
 		
 		tiles = new Tilemap("graphics/tiles-3.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), C.GS, C.GS);
 		tiles.pixelSnapping = true;
-		tiles.smooth = false;
+		
 		
 		bgTiles = new Tilemap("graphics/bgtiles.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), C.GS, C.GS);
 		bgTiles.pixelSnapping = true;
-		bgTiles.smooth = false;
+		
 		bgTiles.loadFromString(fastXml.node.BG.innerData, ",", "\n");
 		
 		
 		for (s in fastXml.node.Entities.nodes.Player) {
 			player.x = Std.parseInt(s.att.x);
 			player.y = Std.parseInt(s.att.y);
+			
 		}
 		for (s in fastXml.node.Entities.nodes.Dog) {
-			scene.add(new Dog(Std.parseInt(s.att.x), Std.parseInt(s.att.y)));
+			var dog = new Dog(Std.parseInt(s.att.x), Std.parseInt(s.att.y));
+			scene.add(dog);
+			C.DOGS.push(dog);
 		}
 		for (b in fastXml.node.Entities.nodes.Bat) {
 			scene.add(new Bat(Std.parseInt(b.att.x), Std.parseInt(b.att.y)));
+		}
+		for (b in fastXml.node.Entities.nodes.Bone) {
+			scene.add(new Bone(Std.parseInt(b.att.x), Std.parseInt(b.att.y)));
 		}
 		
 		autoTile();

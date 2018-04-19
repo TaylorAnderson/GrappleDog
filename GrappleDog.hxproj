@@ -11,7 +11,7 @@
     <movie version="1" />
     <movie minorVersion="0" />
     <movie platform="Lime" />
-    <movie background="333333" />
+    <movie background="222238" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -23,6 +23,7 @@
     <class path="C:\HaxeToolkit\haxe\lib\openfl\7,1,2\src\externs\extras" />
     <class path="C:\HaxeToolkit\haxe\lib\HaxePunk\git\backend\flash" />
     <class path="C:\HaxeToolkit\haxe\lib\HaxePunk\git\backend\lime" />
+    <class path="C:\HaxeToolkit\haxe\lib\HaxePunk\git\extras" />
     <class path="bin\html5\haxe" />
   </classpaths>
   <!-- Build options -->

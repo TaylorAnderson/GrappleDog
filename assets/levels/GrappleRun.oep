@@ -13,10 +13,10 @@
     <Height>640</Height>
   </LevelMinimumSize>
   <LevelMaximumSize>
-    <Width>960</Width>
-    <Height>640</Height>
+    <Width>1024</Width>
+    <Height>704</Height>
   </LevelMaximumSize>
-  <Filename>D:\Game Projects\HaxePunk Projects\GrappleRun\assets\levels\GrappleRun.oep</Filename>
+  <Filename>D:\Game Projects\HaxePunk Projects\GrappleDog\assets\levels\GrappleRun.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
@@ -115,6 +115,21 @@
         <Y>0</Y>
       </Origin>
       <ImageDefinition DrawMode="Image" ImagePath="..\graphics\bat.png" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Bone" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\graphics\bone.png" Tiled="false">
         <RectColor A="255" R="255" G="0" B="0" />
       </ImageDefinition>
       <ValueDefinitions />

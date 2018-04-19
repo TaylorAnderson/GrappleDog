@@ -11,6 +11,8 @@
 	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
 
 	<source path="src" />
+	
+	<set name="hxp_extras"/>
 
 	<!-- classpath, haxe libs -->
 	<haxelib name="HaxePunk" />
@@ -23,4 +25,5 @@
 	<assets path="assets/levels" rename="levels" include="*.oel" />
 
 	<icon path="assets/HaxePunk.svg" />
+	
 </project>

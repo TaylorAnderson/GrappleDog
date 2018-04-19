@@ -6,7 +6,7 @@ import haxepunk.HXP;
 import haxepunk.Mask;
 import haxepunk.graphics.Image;
 import haxepunk.graphics.Spritemap;
-import js.html.svg.AnimatedBoolean;
+
 
 /**
  * ...
@@ -15,7 +15,7 @@ import js.html.svg.AnimatedBoolean;
 class Dog extends PhysicsObject {
 
 	public var img:Spritemap;
-	private var collected:Bool = false;
+	public var collected:Bool = false;
 	public function new(x:Float=0, y:Float=0) {
 		super(x, y);
 		var file = HXP.choose("graphics/dog1.png", "graphics/dog2.png", "graphics/dog3.png");
@@ -23,7 +23,7 @@ class Dog extends PhysicsObject {
 		img = new Spritemap(TileType.fromString(file), 10, 10);
 		img.add("idle", [0]); 
 		img.add("walk", [1]);
-		img.smooth = false;
+		type = "dog";
 		this.graphic = img;
 		setHitbox(10, 10);
 	}

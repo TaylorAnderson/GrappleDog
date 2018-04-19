@@ -1,21 +1,10 @@
 package;
 
 import com.haxepunk.Entity;
-import com.haxepunk.Graphic;
-import com.haxepunk.graphics.Image;
-import com.haxepunk.HXP;
-import com.haxepunk.Mask;
-import com.haxepunk.utils.Draw;
 import haxepunk.Camera;
-import haxepunk.Graphic.ImageType;
-import haxepunk.graphics.hardware.Texture;
 import haxepunk.math.MathUtil;
 import haxepunk.utils.DrawContext;
-
-import openfl.geom.Rectangle;
 import openfl.geom.Point;
-
-import openfl.display.BitmapData;
 
 /**
  * ...
@@ -62,8 +51,6 @@ class GrappleLine extends Entity
 		var scale = 1;
 		
 		var d:Point = Helper.findVector(new Point(xPos, yPos), new Point(pScreenX, pScreenY), scale);
-		var drawInterval = 2;
-		var drawIntervalCounter = 0;
 		while (MathUtil.distance(xPos, yPos, pScreenX, pScreenY) > scale) {
 			if (!hook.stuck && !hook.deactivated) {
 				if (Math.abs(hook.v.x) > Math.abs(hook.v.y))

@@ -2,6 +2,7 @@ package;
 
 import haxepunk.Entity;
 import haxepunk.Graphic;
+import haxepunk.HXP;
 import haxepunk.Mask;
 import haxepunk.math.Vector2;
 
