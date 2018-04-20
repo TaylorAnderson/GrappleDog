@@ -14,7 +14,7 @@ class GameScene extends Scene {
 	private var level:LevelChunk;
 	private var snappedCamera:Bool = false;
 	public function new() {
-		PixelArtScaler.globalActivate();
+		
 		super();
 	}
 	public override function begin() {
@@ -25,7 +25,8 @@ class GameScene extends Scene {
 		this.add(player);
 		this.add(level = new LevelChunk(0, 0, "levels/cave-big.oel", player));
 		
-		var counter = new DogCounter(HXP.halfWidth, 20);
+		var counter = new DogCounter(HXP.halfWidth, 10);
+		counter.x -= counter.width;
 		this.add(counter);
 
 	}

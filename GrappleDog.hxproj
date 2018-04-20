@@ -8,10 +8,10 @@
     <movie fps="60" />
     <movie width="960" />
     <movie height="640" />
-    <movie version="1" />
+    <movie version="0" />
     <movie minorVersion="0" />
     <movie platform="Lime" />
-    <movie background="222238" />
+    <movie background="#222238" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -28,12 +28,12 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="HaxePunk=4.0.1&#xA;openfl=7.1.2&#xA;lime=6.2.0&#xA;source-header=haxe&#xA;tools=6.2.0&#xA;howlerjs&#xA;no-compilation&#xA;openfl-html5&#xA;webgl&#xA;lime-html5&#xA;hxp_debug&#xA;html5&#xA;web&#xA;html5&#xA;display" />
+    <option directives="HaxePunk=4.0.1&#xA;openfl=7.1.2&#xA;lime=6.2.0&#xA;source-header=haxe&#xA;tools=6.2.0&#xA;howlerjs&#xA;no-compilation&#xA;openfl-html5&#xA;webgl&#xA;lime-html5&#xA;html5&#xA;web&#xA;html5&#xA;display" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="False" />
-    <option additional="--macro openfl._internal.utils.ExtraParams.include()&#xA;--macro lime.Lib.extraParams()&#xA;--macro haxepunk.utils.Platform.run()&#xA;--macro allowPackage('flash')&#xA;--remap flash:openfl&#xA;-debug " />
+    <option additional="--macro openfl._internal.utils.ExtraParams.include()&#xA;--macro lime.Lib.extraParams()&#xA;--macro haxepunk.utils.Platform.run()&#xA;--macro allowPackage('flash')&#xA;--remap flash:openfl" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

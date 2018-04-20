@@ -6,6 +6,7 @@
  	<app file="GrappleRun" main="Main" path="bin" />
 
 	<window fps="60" background="0x222238" />
+	<window antialiasing="0" />
 	<window width="960" height="640" resizable="true" unless="mobile" />
 	<window fullscreen="true" if="mobile" />
 	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />

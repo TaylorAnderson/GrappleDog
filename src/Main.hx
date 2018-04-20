@@ -16,12 +16,13 @@ class Main extends Engine
 #if debug
 		Console.enable();
 #end
+		PixelArtScaler.globalActivate();
 		HXP.resize(960, 640);
-		HXP.scene = new GameScene();
-		HXP.defaultFont = "font/ChevyRay - Magic Book";
-		
+		HXP.scene = new MenuScene();
+		//HXP.defaultFont = "font/ChevyRay - Magic Book";
 	}
 
 	public static function main() { new Main(); }
+	
 
 }

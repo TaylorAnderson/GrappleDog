@@ -58,7 +58,7 @@ class Player extends PhysicsObject {
 	public var inputVector:Vector2 = new Vector2();
 	public var dogs:Array<Dog> = [];
 	public var trail:Array<Vector2> = [];
-	
+		
 	private var trailUpdateInterval = 5;
 	private var trailUpdateCounter = 0;
 	
