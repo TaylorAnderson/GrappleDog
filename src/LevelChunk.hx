@@ -5,6 +5,7 @@ import haxepunk.Entity;
 import haxepunk.Graphic;
 import haxepunk.HXP;
 import haxepunk.Mask;
+import haxepunk.graphics.Image;
 import haxepunk.graphics.tile.Tilemap;
 import haxepunk.masks.Grid;
 import haxepunk.math.Random;
@@ -44,14 +45,14 @@ class LevelChunk extends Entity {
 		fastXml = new Fast(xml.firstElement());
 		this.levelWidth = Std.parseInt(fastXml.att.width);
 		this.levelHeight = Std.parseInt(fastXml.att.height);
-		grid = new Grid(Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), C.GS, C.GS);
+		grid = new Grid(Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), Global.GS, Global.GS);
 		grid.loadFromString(fastXml.node.Grid.innerData, "", "\n");
 		
-		tiles = new Tilemap("graphics/tiles-3.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), C.GS, C.GS);
+		tiles = new Tilemap("graphics/darktiles.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), Global.GS, Global.GS);
 		tiles.pixelSnapping = true;
 		
 		
-		bgTiles = new Tilemap("graphics/bgtiles.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), C.GS, C.GS);
+		bgTiles = new Tilemap("graphics/bgtiles.png", Std.parseInt(fastXml.att.width), Std.parseInt(fastXml.att.height), Global.GS, Global.GS);
 		bgTiles.pixelSnapping = true;
 		
 		bgTiles.loadFromString(fastXml.node.BG.innerData, ",", "\n");
@@ -62,16 +63,22 @@ class LevelChunk extends Entity {
 			player.y = Std.parseInt(s.att.y);
 			
 		}
-		for (s in fastXml.node.Entities.nodes.Dog) {
-			var dog = new Dog(Std.parseInt(s.att.x), Std.parseInt(s.att.y));
+		for (e in fastXml.node.Entities.nodes.Dog) {
+			var dog = new Dog(Std.parseInt(e.att.x), Std.parseInt(e.att.y));
 			scene.add(dog);
-			C.DOGS.push(dog);
+			Global.DOGS.push(dog);
 		}
-		for (b in fastXml.node.Entities.nodes.Bat) {
-			scene.add(new Bat(Std.parseInt(b.att.x), Std.parseInt(b.att.y)));
+		for (e in fastXml.node.Entities.nodes.Bat) {
+			scene.add(new Bat(Std.parseInt(e.att.x), Std.parseInt(e.att.y)));
 		}
-		for (b in fastXml.node.Entities.nodes.Bone) {
-			scene.add(new Bone(Std.parseInt(b.att.x), Std.parseInt(b.att.y)));
+		for (e in fastXml.node.Entities.nodes.Bone) {
+			scene.add(new Bone(Std.parseInt(e.att.x), Std.parseInt(e.att.y)));
+		}
+		for (e in fastXml.node.Entities.nodes.DoubleJumpTutorial) {
+			scene.add(new Entity(Std.parseInt(e.att.x), Std.parseInt(e.att.y), new Image("graphics/doublejump-instruction.png")));
+		}
+		for (e in fastXml.node.Entities.nodes.BoneTutorial) {
+			scene.add(new Entity(Std.parseInt(e.att.x), Std.parseInt(e.att.y), new Image("graphics/dogbone-tutorial.png")));
 		}
 		
 		autoTile();

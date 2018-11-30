@@ -48,7 +48,7 @@ class GrappleLine extends Entity
 		context.setColor();
 		context.lineThickness = 0;
 		
-		var scale = 1;
+		var scale = 2;
 		
 		var d:Point = Helper.findVector(new Point(xPos, yPos), new Point(pScreenX, pScreenY), scale);
 		while (MathUtil.distance(xPos, yPos, pScreenX, pScreenY) > scale) {

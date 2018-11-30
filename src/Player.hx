@@ -178,6 +178,11 @@ class Player extends PhysicsObject {
 						scene.remove(grapple);
 					}
 				}
+				if (Input.pressed("jump")) {
+					scene.remove(grapple);
+					v.y -= jumpStrength / 2;
+					
+				}
 			}
 			else if (grapple.stuckTo == CollisionTypes.BAT) {
 				dir.normalize(4);

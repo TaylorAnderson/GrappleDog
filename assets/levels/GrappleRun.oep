@@ -9,12 +9,12 @@
     <Height>640</Height>
   </LevelDefaultSize>
   <LevelMinimumSize>
-    <Width>960</Width>
-    <Height>640</Height>
+    <Width>240</Width>
+    <Height>160</Height>
   </LevelMinimumSize>
   <LevelMaximumSize>
-    <Width>1024</Width>
-    <Height>704</Height>
+    <Width>1280</Width>
+    <Height>832</Height>
   </LevelMaximumSize>
   <Filename>D:\Game Projects\HaxePunk Projects\GrappleDog\assets\levels\GrappleRun.oep</Filename>
   <AngleMode>Radians</AngleMode>
@@ -130,6 +130,36 @@
         <Y>0</Y>
       </Origin>
       <ImageDefinition DrawMode="Image" ImagePath="..\graphics\bone.png" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="DoubleJumpTutorial" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\graphics\doublejump-instruction.png" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="BoneTutorial" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Image" ImagePath="..\graphics\dogbone-tutorial.png" Tiled="false">
         <RectColor A="255" R="255" G="0" B="0" />
       </ImageDefinition>
       <ValueDefinitions />

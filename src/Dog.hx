@@ -29,9 +29,9 @@ class Dog extends PhysicsObject {
 	}
 	override public function update() {
 		if (!collected) super.update();
-		if (collide("player", x, y) != null && C.PLAYER.dogs.indexOf(this) == -1) {
+		if (collide("player", x, y) != null && Global.PLAYER.dogs.indexOf(this) == -1) {
 			collected = true;
-			C.PLAYER.dogs.push(this);
+			Global.PLAYER.dogs.push(this);
 			img.play("walk");
 		}
 		

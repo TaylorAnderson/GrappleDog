@@ -24,8 +24,8 @@ class Bone extends Entity {
 	override public function update() {
 		if (collide("player", x, y) != null && !collected) {
 			collected = true;
-			this.x = C.PLAYER.x - 20; //setting up for rotation
-			for (dog in C.DOGS) {
+			this.x = Global.PLAYER.x - 20; //setting up for rotation
+			for (dog in Global.DOGS) {
 				if (!dog.collected) {
 					this.dog = dog;
 				}
@@ -33,8 +33,8 @@ class Bone extends Entity {
 		}
 		if (collected) {
 			var pos = new Vector2();
-			var px = C.PLAYER.x + C.PLAYER.halfWidth;
-			var py = C.PLAYER.y + C.PLAYER.halfHeight;
+			var px = Global.PLAYER.x + Global.PLAYER.halfWidth;
+			var py = Global.PLAYER.y + Global.PLAYER.halfHeight;
 			MathUtil.angleXY(pos, MathUtil.angle(px, py, dog.x, dog.y), 20, px, py); 
 			this.x = pos.x;
 			this.y = pos.y;

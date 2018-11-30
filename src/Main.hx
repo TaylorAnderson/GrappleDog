@@ -7,7 +7,7 @@ import haxepunk.pixel.PixelArtScaler;
 class Main extends Engine
 {
 	public function new() {
-		super(240, 160,60);
+		super(240, 160,60, false);
 		
 	}
 	override public function init()
@@ -18,8 +18,7 @@ class Main extends Engine
 #end
 		PixelArtScaler.globalActivate();
 		HXP.resize(960, 640);
-		HXP.scene = new MenuScene();
-		//HXP.defaultFont = "font/ChevyRay - Magic Book";
+		HXP.scene = new TitleScene();
 	}
 
 	public static function main() { new Main(); }
